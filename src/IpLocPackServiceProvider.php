@@ -14,7 +14,7 @@ class IpLocPackServiceProvider extends ServiceProvider
         // Bind interface.
         $this->app->singleton(
             abstract: IpLocInterface::class,
-            concrete: fn ($app) => $app->make(IpLoc::class)
+            concrete: fn ($app) => $app->make(IpLoc::class, ['app' => $app])
         );
     }
 

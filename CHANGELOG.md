@@ -22,9 +22,9 @@
 - [x] Config directive to enable getting Cloudflare's'`CF-IPCountry` header, this feature requires the app to be behind Cloudflare's network and enables `IP Geo Location` feature.
 - [x] `IpLocApi` facades added.
 - [x] Ip Location data schema class.
-- [ ] Test on data schema class.
-- [ ] Test on service provider's functions.
-- [ ] Test on service basic functions.
+- [x] Test on data schema class.
+- [x] Test on service provider's functions.
+- [x] Test on service basic functions.
 - [x] `IpLocPackServiceProvider` merging `iploc` config into the main application configuration,
 - [x] `config/iploc.php` configuration namespace.
 - [x] `IpLocApi` facade setup.

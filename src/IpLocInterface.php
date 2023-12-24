@@ -11,5 +11,5 @@ interface IpLocInterface
 
     public function getIpAddress(Request $request): string;
 
-    public function getIpLocation(): IpLocSpec;
+    public function getIpLocation(string $ipAddr): false|IpLocSpec;
 }
