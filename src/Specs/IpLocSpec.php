@@ -25,7 +25,7 @@ class IpLocSpec extends SpecBase implements SpecInterface
             $payload['city_name'] ?? '',
         );
 
-        $this->geo = new GeoSpec($payload['longitude'] ?? '', $payload['latitude'] ?? '');
+        $this->geo = new GeoSpec($payload['longitude'] ?? 0.0, $payload['latitude'] ?? 0.0);
         
         $this->connection = new ConnectionSpec(
             $payload['asn'] ?? '',
