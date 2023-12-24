@@ -1,6 +1,7 @@
 {
     "name": "tj/ipgeoloc",
     "description": "Laravel package to get Ip Address Geo Location information from ip2location API.",
+    "version": "0.1.0",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -22,7 +23,8 @@
     "require-dev": {
         "orchestra/testbench": "^8.0",
         "pestphp/pest-plugin-laravel": "^2.2",
-        "laravel/pint": "^1.13"
+        "laravel/pint": "^1.13",
+        "guzzlehttp/guzzle": "^7.8"
     },
     "config": {
         "allow-plugins": {

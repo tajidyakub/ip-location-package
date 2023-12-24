@@ -1,4 +1,5 @@
 <?php
+
 namespace Tjx\IpLoc\Specs;
 
 class IpLocSpec extends SpecBase implements SpecInterface
@@ -17,7 +18,7 @@ class IpLocSpec extends SpecBase implements SpecInterface
     {
         $this->ip = $payload['ip'] ?? '';
         $this->timeZone = $payload['time_zone'] ?? '';
-        
+
         $this->country = new CountrySpec(
             $payload['country_name'] ?? '',
             $payload['country_code'] ?? '',
@@ -26,7 +27,7 @@ class IpLocSpec extends SpecBase implements SpecInterface
         );
 
         $this->geo = new GeoSpec($payload['longitude'] ?? 0.0, $payload['latitude'] ?? 0.0);
-        
+
         $this->connection = new ConnectionSpec(
             $payload['asn'] ?? '',
             $payload['as'] ?? '',
@@ -34,5 +35,4 @@ class IpLocSpec extends SpecBase implements SpecInterface
             $payload['net_speed'] ?? '',
         );
     }
-    
 }

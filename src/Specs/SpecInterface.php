@@ -1,4 +1,5 @@
 <?php
+
 namespace Tjx\IpLoc\Specs;
 
 interface SpecInterface
