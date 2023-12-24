@@ -8,6 +8,11 @@
             "Tjx\\IpLoc\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "tajidyakub",
@@ -22,6 +27,13 @@
     "config": {
         "allow-plugins": {
             "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel" : {
+            "providers": [
+                "\\Tjx\\IpLoc\\IpLocPackServiceProvider"
+            ]
         }
     }
 }

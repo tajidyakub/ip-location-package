@@ -1,7 +1,8 @@
 <?php
-namespace Tj\IpLoc;
+namespace Tjx\IpLoc;
 
 use Illuminate\Support\ServiceProvider;
+use Tjx\IpLoc\IpLocInterface;
 
 class IpLocPackServiceProvider extends ServiceProvider
 {
@@ -9,6 +10,12 @@ class IpLocPackServiceProvider extends ServiceProvider
     {
         // Merge configuration.
         $this->mergeConfigFrom(__DIR__.'/../config/iploc.php', 'iploc');
+
+        // Bind interface.
+        $this->app->singleton(
+            abstract: IpLocInterface::class,
+            concrete: fn ($app) => $app->make(IpLoc::class)
+        );
     }
 
     public function boot(): void

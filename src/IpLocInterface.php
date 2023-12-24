@@ -3,6 +3,7 @@ namespace Tjx\IpLoc;
 
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Request;
+use Tjx\IpLoc\Specs\IpLocSpec;
 
 interface IpLocInterface
 {
@@ -10,5 +11,5 @@ interface IpLocInterface
 
     public function getIpAddress(Request $request): string;
 
-    public function getIpLocation();
+    public function getIpLocation(): IpLocSpec;
 }

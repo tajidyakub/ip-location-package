@@ -9,9 +9,12 @@
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
+    <php>
+        <env name="IPLOC_SERVICE_BASE" value="https://api.ip2location.io" />
+        <env name="IPLOC_API_KEY" value="BA708D085ADED5B513AD5B3A84F50C36" />
+    </php>
     <source>
         <include>
-            <directory suffix=".php">./app</directory>
             <directory suffix=".php">./src</directory>
         </include>
     </source>
